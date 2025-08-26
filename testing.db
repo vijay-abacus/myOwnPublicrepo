@@ -1,1 +1,34 @@
+-- Users table
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  email TEXT
+);
+INSERT INTO users VALUES (1, 'alice', 'alice@email.com');
+INSERT INTO users VALUES (2, 'bob', 'bob@email.com');
+
+-- Products table
+CREATE TABLE products (
+  product_id INTEGER PRIMARY KEY,
+  name TEXT,
+  price REAL,
+  in_stock INTEGER
+);
+INSERT INTO products VALUES (1, 'Widget', 10.99, 1);
+INSERT INTO products VALUES (2, 'Gadget', 24.50, 0);
+
+-- Notes table with Unicode
+CREATE TABLE notes (
+  note_id INTEGER PRIMARY KEY,
+  content TEXT,
+  created_at TEXT
+);
+INSERT INTO notes VALUES (1, 'これはテストメモです', '2025-08-26 12:34:00');
+INSERT INTO notes VALUES (2, '🛠️ Emoji test entry', '2025-08-25 11:00:00');
+INSERT INTO notes VALUES (3, NULL, '2025-08-24 13:23:55');
+
+-- Logs table, schema only
+CREATE TABLE logs (id INTEGER, message TEXT, created TIMESTAMP);
+
+.exit
 
